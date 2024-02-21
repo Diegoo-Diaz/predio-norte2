@@ -6,47 +6,59 @@
 
 }
 
-
-
-
-/* encabezado nav*/
-.header {
+.menu{
     background-color: cadetblue;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
+    flex-grow: 0;
+    
+
+}
+
+
+.menu-icon{
 
 
 }
 
-.header img {
+.menu-icon:hover{
+    color: brown;
+}
 
+
+.padding-0{
+    padding-left: 0;
+
+}
+
+/* encabezado nav*/
+
+.logo{
     width: 200px;
     height: 200px;
     transition: 2s;
 }
 
-
-.header img:hover{
+.logo:hover{
 transform: scale(0.3);
 transition: 2s;
 }
-.header nav ul {
-    list-style: none;
-    display: flex;
-    column-gap: 45px;
-    justify-content: space-between;
+.header img {
 
+    width: 200px;
+}
+
+.header{
+    background-color: #353333;
 }
 
 .header nav ul a {
+    background: #34e89e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: black;
     font-size: 20px;
     text-decoration: none;
     font-family: sans-serif;
     
-
 }
 
 .header nav ul a:hover{
@@ -54,6 +66,107 @@ transition: 2s;
 
 }
 
+/*footer*/
+.enlaces {
+    width: 17%;
+    height: 17%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    padding: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    bottom: none;
+    column-gap: 45px;
+}
+
+.enlaces:focus{
+    color: beige;
+    
+}
+
+
+
+/*icono whatsap*/
+
+
+.derechos {
+    font-family: cursive;
+    font-size: 12px;
+
+}
+
+.icono {
+    width: 1%;
+    height: 1px;
+
+
+}
+
+.icono img {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: none;
+
+
+}
+
+/* index carrusel*/
+
+
+.video2 {
+    background-image: #9B9B9B;
+margin: 70px;
+background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+border-radius: 30px 2px;
+justify-items: center;
+align-items: center;
+flex-direction:row;
+
+}
+
+.animacion{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(163, 180, 163);
+    animation-name: animacion;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-delay: 1s;
+    margin-left: 0;
+    margin-top: 30px;
+
+
+}
+
+@keyframes animacion{
+    0%{
+        width: 100px;
+    }
+    25%{
+        width: 600px;
+        background-color: rgb(76, 164, 76);
+    }
+    50%{
+        width: 700px;
+        background-color: rgb(24, 103, 24);
+    }
+    90%{
+        width: 1000px;
+        background-color: black;
+    }
+    100%{
+        width: 1500px;
+        background-color: white;
+    }
+}
+
+/* actividades*/
 .contenedor-destacados {
 
     display: flex;
@@ -63,10 +176,25 @@ transition: 2s;
 }
 
 /*actividades y cards*/
-.actividades-principales {
-    margin: 38px;
+
+.texto-act{
+    background-color: #0ba360;
+    margin: 100px;
     text-align: center;
     font-size: 45px;
+    transition: box-shadow 0.3s ease-in-out
+}
+
+.texto-act:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 50px 15px;
+
+}
+
+
+.actividades-principales {
+
 
 }
 
@@ -80,12 +208,7 @@ transition: 2s;
     border-radius: 0px 0px 0px 5px;
     font-size: 12px;
     font-family: fantasy;
-
-
-
 }
-
-
 
 
 .card {
@@ -97,8 +220,28 @@ transition: 2s;
     box-shadow: 24px 21px 32px 0px rgba(0, 0, 0, 0.64);
     column-gap: 30px;
     position: relative;
+    background-image: linear-gradient(
+        100deg,
+        hsl(93deg 70% 34%) 0%,
+        hsl(93deg 48% 43%) 20%,
+        hsl(93deg 36% 50%) 53%,
+        hsl(92deg 36% 57%) 74%,
+        hsl(91deg 36% 64%) 85%,
+        hsl(91deg 36% 71%) 92%,
+        hsl(90deg 36% 78%) 96%,
+        hsl(90deg 36% 85%) 99%,
+        hsl(89deg 37% 93%) 100%,
+        hsl(0deg 0% 100%) 100%
+        
+    );
+    transition: 2s;
 
 
+}
+
+.card:hover{
+    transform: translate(20px, 50px);
+    transition: 2s;
 }
 
 .card img {
@@ -131,87 +274,6 @@ transition: 2s;
 
 }
 
-/*estilos enlaces*/
-.enlaces {
-    width: 17%;
-    height: 17%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
-    list-style: none;
-    padding: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    bottom: none;
-    column-gap: 45px;
-}
-
-.enlaces:focus{
-    color: beige;
-    
-}
-
-/* index carrusel*/
-
-.carousel-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    background-color: rgb(36, 36, 36);
-}
-
-.carousel-item img {
-    max-width: 60%; 
-    height: auto; 
-    display: block;
-    margin: 0 auto; 
-}
-
-
-.video2 {
-    margin: 35px;
-    
-    text-align: center;
-
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px 2px;
-
-}
-
-
-
-/*icono whatsap*/
-
-
-.derechos {
-    font-family: cursive;
-    font-size: 12px;
-
-}
-
-.icono {
-    width: 1%;
-    height: 1px;
-
-
-}
-
-.icono img {
-    width: 70px;
-    height: 70px;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    background-color: none;
-
-
-}
-
-
 /* css a ubicacion*/
 
 .logo-ubicacion {
@@ -242,29 +304,91 @@ border-radius: 40px 0;
 
 /*css ubicacion*/
 
-.datos-completos {
+.contacto {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    font-size: 20px;
     width: 100%;
-    border-radius: 5px 0;
-    justify-content: space-around;
+    margin-right: 0;
+    border-radius: 20px 0;
     overflow: hidden;
     box-shadow: 24px 21px 32px 0px rgba(0, 0, 0, 0.64);
     column-gap: 2rem;
+    font-weight: bold;
+    background: #34e89e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.datos {
-    background-color: rgba(174, 231, 207, 0.421);
-    width: 30%;
-    height: 45x;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 20px;
+/* css contacto*/
+.contacto-texto {
+    background-color: rgb(218, 218, 218);
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    padding: 10%;
+    border-radius: 40px 0;
+}
+
+
+
+.formulario{
     display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    margin: 30px;
+    justify-items: center;
+    align-items: center;
+    border: 1px 1px 1px 1px;
+        background-image: linear-gradient(
+        50deg,
+        hsl(87deg 100% 20%) 0%,
+        hsl(95deg 65% 23%) 19%,
+        hsl(101deg 47% 24%) 28%,
+        hsl(107deg 35% 25%) 36%,
+        hsl(114deg 25% 25%) 42%,
+        hsl(120deg 16% 25%) 48%,
+        hsl(127deg 17% 36%) 55%,
+        hsl(133deg 18% 47%) 62%,
+        hsl(139deg 28% 58%) 71%,
+        hsl(143deg 49% 70%) 82%,
+        hsl(148deg 100% 82%) 100%);
+        padding: 40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        overflow: hidden;
 
 
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
 
+}
+.mensajee{
+display: flex;
+margin-bottom: 0;
+margin-left: 0;
+
+}
+
+.submit{
+    font-size: 20px;
+}
+
+.video{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: transform 0.3s ease; /* Transición de transformación */
 }
 
 /*css nosotros*/
@@ -275,7 +399,6 @@ border-radius: 40px 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 100%;
     height: 100%;
-    /*flex-wrap: wrap;*/
     text-align: justify;
     padding: 10%;
     border-radius: 40px 0;
@@ -293,18 +416,13 @@ h2 {
 /* Estilo para el checkbox */
 input[type="checkbox"] {
     margin-right: 5px;
+
 }
 /*css nosotros*/
 .contenedor-grid {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: auto auto auto auto;
-
-
-
-
-
-
 
 }
 img{
@@ -319,88 +437,31 @@ img{
 
 }
 
-.contacto-texto {
-    background-color: rgb(218, 218, 218);
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    width: 100%;
-    height: 100%;
-    text-align: justify;
-    padding: 10%;
-    border-radius: 40px 0;
-}
-
-/*mas css para contactos*/
-.contact {
-
-    background-color: rgb(219, 239, 239);
-    font-size: larger;
-    padding: 40px;
-    border-radius: 20px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    box-shadow: 24px 21px 32px 0px rgba(0, 0, 0, 0.64);
-    column-gap: 30px;
-
-
-
-
-}
-
-.nombree {
-    padding: 20px;
-
-}
-
-.apellidoo {
-    padding: 20px;
-
-}
-
-.telefonoo {
-    padding: 20px;
-}
-
-.emaill {
-    padding: 20px;
-
-}
-
-.formulario{
-    margin-bottom: auto;
-    padding: 30px;
-
-}
-
-.video{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: auto;
-    padding: 30px;
-    margin: 30px ;
-
-
-}
-
-
-
-
-
-
 /* Tablet */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
+
+
+    
     header {
         display: flex;
         flex-direction: column;
+        
     }
     header nav ul {
         flex-direction: column;
         width: 100%;
     }
+    .menu{
+        position: absolute;
+        top: 150px;
+        background-color: antiquewhite;
+        width: 100vw;
+        z-index: 2;
+    }
     body {
-        background-color: rgb(184, 48, 48);
+        background-color: #0d0d0c;
+        background-image: linear-gradient(199deg, #0d0d0c 0%, #2ea016 71%, #ffffff 100%);
+        
     }
 
     .contacto-texto{
@@ -409,7 +470,7 @@ img{
         grid-template-rows: auto;
     }
 
-    .vídeo
+    .video
     .formulario {
     display: Flex;
     justify-content: centro;
@@ -426,6 +487,128 @@ img{
     
     
     }
+
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 30px;
+        padding: 30px;
+    }
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    overflow: hidden;
+}
+.contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+.enlaces{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+}
+.icono {
+    width: 1%;
+    height: 1px;
+
+
+}
+
+.icono img {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: none;
+
+
+}
+.actividades-principales {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+
+}
+
+.free {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: black;
+    padding: 6px;
+    border-radius: 0px 0px 0px 5px;
+    font-size: 12px;
+    font-family: fantasy;
+
+
+
+}
+
+
+
+
+.card {
+    width: 350px;
+    height: 380px;
+    background-color: rgb(222, 218, 218);
+    border-radius: 20px 0;
+    overflow: hidden;
+    box-shadow: 24px 21px 32px 0px rgba(0, 0, 0, 0.64);
+    column-gap: 30px;
+    position: relative;
+    background-image: linear-gradient(
+        100deg,
+        hsl(93deg 70% 34%) 0%,
+        hsl(93deg 48% 43%) 20%,
+        hsl(93deg 36% 50%) 53%,
+        hsl(92deg 36% 57%) 74%,
+        hsl(91deg 36% 64%) 85%,
+        hsl(91deg 36% 71%) 92%,
+        hsl(90deg 36% 78%) 96%,
+        hsl(90deg 36% 85%) 99%,
+        hsl(89deg 37% 93%) 100%,
+        hsl(0deg 0% 100%) 100%
+        
+    );
+    transition: 2s;
+    animation-iteration-count: infinite;
+    
+
+
+}
+
+.card:hover{
+    transform: translate(20px, 50px);
+    transition: 2s;
+}
+
+.card img {
+
+    width: 100%;
+    height: 200px;
+
+
+}
+
+.card-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+    justify-content: center;
+    height: 180px;
+
+
+}
 
 }
 
@@ -468,7 +651,130 @@ img{
     
     
     }
+
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 30px;
+        padding: 30px;
+    }
+    .formulario{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        overflow: hidden;
+    }
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .enlaces{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    
+    }
+    .icono {
+        width: 1%;
+        height: 1px;
+    
+    
+    }
+    
+    .icono img {
+        width: 70px;
+        height: 70px;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        background-color: none;
+    
+    
+    }
+    
+    .actividades-principales {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
+
+    }
+    
+    .free {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        background-color: black;
+        padding: 6px;
+        border-radius: 0px 0px 0px 5px;
+        font-size: 12px;
+        font-family: fantasy;
+    
+    
+    
+    }
+    
+    
+    
+    
+    .card {
+        width: 350px;
+        height: 380px;
+        background-color: rgb(222, 218, 218);
+        border-radius: 20px 0;
+        overflow: hidden;
+        box-shadow: 24px 21px 32px 0px rgba(0, 0, 0, 0.64);
+        column-gap: 30px;
+        position: relative;
+        background-image: linear-gradient(
+            100deg,
+            hsl(93deg 70% 34%) 0%,
+            hsl(93deg 48% 43%) 20%,
+            hsl(93deg 36% 50%) 53%,
+            hsl(92deg 36% 57%) 74%,
+            hsl(91deg 36% 64%) 85%,
+            hsl(91deg 36% 71%) 92%,
+            hsl(90deg 36% 78%) 96%,
+            hsl(90deg 36% 85%) 99%,
+            hsl(89deg 37% 93%) 100%,
+            hsl(0deg 0% 100%) 100%
+            
+        );
+        transition: 2s;
+        animation-iteration-count: infinite;
+
+    
+    
+    }
+    
+    .card:hover{
+        transform: translate(20px, 50px);
+        transition: 2s;
+    }
+    
+    .card img {
+    
+        width: 100%;
+        height: 200px;
+    
+    
+    }
+    
+    .card-texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 10px;
+        justify-content: center;
+        height: 180px;
+    
+    
+    }
+    
 }
-
-
 
